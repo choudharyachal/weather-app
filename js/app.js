@@ -9,7 +9,7 @@ document.getElementById('search-btn').addEventListener('click',function() {
     }
 });
 async function fetchWeatherData(city) {
-  const apiKey = '7088a30a16cf7bc3b3ccb16e2c594288'; // Yahan apni real API key likhni hai
+  const apiKey = '7088a30a16cf7bc3b3ccb16e2c594288'; 
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   const displayArea= document.getElementById('weather-display-area');
@@ -32,14 +32,12 @@ async function fetchWeatherData(city) {
     const data = await response.json();
     console.log('Weather data:', data);
 
-    // Ab DOM update karna (page pe data show karna)
     cityNameEl.textContent = data.name;
     tempEl.textContent = `${data.main.temp}°C`;
     descEl.textContent = data.weather[0].description;
     humidityEl.textContent = `Humidity: ${data.main.humidity}%`;
     windEl.textContent = `Wind Speed: ${data.wind.speed} km/h`;
 
-    // Weather icon lagana
     
     iconEl.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     iconEl.alt= data.weather[0].description;
