@@ -1,5 +1,6 @@
-body {font-family: Arial, snas-serif;
-    background-color: aliceblue;
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(42, 113, 175);
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -34,7 +35,7 @@ h1{
 #search-btn{
     padding: 10px;
     cursor: pointer;
-    background-color: #007bff;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 4px;
